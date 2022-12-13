@@ -1,3 +1,3 @@
 export abstract class MailService {
-  abstract sendEmail(): String;
+  abstract sendEmail(): string;
 }
