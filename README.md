@@ -58,16 +58,12 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Anotações.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Nest é um framework opinidado, ou certo, ele te diz a melhor forma de fazer algo.
+- Utilizei nestjs com prisma e sqlite, para ter um db fisico direto na aplicação.
+- Utilizei o prisma client para conexão com o banco de dados, além de usar a prisma CLI para facilitar a criação de models e migrations. Logo, comandos como `npx prisma init --datasource-provider SQLite` ou `npx prisma migrate dev` foram utilizados, o primeiro para criar toda a configuração com sqlit e o segundo para criar as migrations de acordo com o que havia dentro do arquivo principal do prisma. Também utilizamos o comando `npx prisma studio`, para abrir no navegador uma interface com acesso ao bd.
+- O nest utiliza decorators e injectables para a manipulação de rotas, serviços e controller.
+- Cada controller é uma rota.
+- O nest utilizada inversão e ineção de dependências, da para entender melhor no link: https://medium.com/@eduardolanfredi/inje%C3%A7%C3%A3o-de-depend%C3%AAncia-ff0372a1672
+- O nest recebe o corpo das requisições pelo @Body importado de nest/common.
