@@ -12,11 +12,11 @@ datasource db {
 
 model Notification {
   id          String    @id
-  recipientId String
+  recipientId String //fk sem tabela, eu basicamente estou referenciando uma informação que está sendo usado em um outro serviço, não nele.
   content     String
   category    String
   readAt      DateTime? //nullable = ?
   createdAt   DateTime  @default(now())
 
-  @@index([recipientId])
+  @@index([recipientId]) //indexando as informações por recipient, deixando a query muito mais leve.
 }
