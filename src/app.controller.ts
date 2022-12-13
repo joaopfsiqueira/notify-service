@@ -15,12 +15,13 @@ export class AppController {
   async create(@Body() body: any) {
     //é dessa forma que pegamos o req.body (express) usando nestjs. Ou melhor, o corpo da requisição. @Body() nomevariavel: tipo
     console.log(body);
+    const { recipientId, content, category } = body;
     await this.prisma.notification.create({
       data: {
         id: randomUUID(),
-        content: 'Você tem uma nova solicitação!',
-        category: 'social',
-        recipientId: randomUUID(),
+        content,
+        category,
+        recipientId,
       },
     });
   }
