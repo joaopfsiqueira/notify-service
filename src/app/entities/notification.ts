@@ -4,18 +4,21 @@ export interface NotificationProps {
 }
 
 export class Notification {
-  private content: string;
-  private category: string;
+  private props: NotificationProps;
 
-  construct() {
+  constructor() {
     this.content = '';
   }
 
-  public set(content: string) {
+  public set content(content: string) {
     if (content.length < 5) {
       throw new Error('Notification content must be at least 5 characters.');
     }
-    this.content = content;
+    this.props.content = content;
+  }
+
+  public get content(): string {
+    return this.props.content;
   }
 }
 
