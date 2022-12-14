@@ -67,4 +67,5 @@ $ npm run test:cov
 - Cada controller é uma rota.
 - O nest utilizada inversão e ineção de dependências, da para entender melhor no link: https://medium.com/@eduardolanfredi/inje%C3%A7%C3%A3o-de-depend%C3%AAncia-ff0372a1672
 - O nest recebe o corpo das requisições pelo @Body importado de nest/common.
-- Utilizamos Jest que o proprio nest nos traz para testar o código. `npm run test`
+- Utilizei Jest que o proprio nest nos traz para testar o código. `npm run test` e o `npm run test:cov` para usar coverage.
+- Utilizei in memory para rodar os testes.
