@@ -7,7 +7,7 @@ export interface NotificationProps {
   content: Content;
   category: string;
   readAt?: Date | null;
-  createdAt: Date;
+  createdAt?: Date | null | undefined;
 }
 
 export class Notification {
